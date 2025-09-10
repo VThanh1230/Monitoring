@@ -34,3 +34,8 @@ monitoring/
 3. **Access Grafana**
    - Open your browser and go to: [http://localhost:3001]
    - Default credentials: `admin` / `admin`
+4. **Setup Grafana**
+   - Go to "Data sources" -> "Add new data source" ->"Prometheus" -> "Connection": Use [http://prometheus:9090] -> "Save & test"
+   - Go to "Dashboards" -> "New" -> "Import"
+   - Find and import dashboards for common applications at [grafana.com/dashboards] or import via dashboard JSON model -> "Load"
+   - Select a Prometheus data source -> Import

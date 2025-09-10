@@ -40,18 +40,14 @@ services:
       - "3001:3000"
     volumes:
       - grafana_data:/var/lib/grafana
-      - ./grafana/provisioning/dashboards.yml:/etc/grafana/provisioning/dashboards.yml
-      - ./grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards
-      - ./grafana/provisioning/datasources.yml:/etc/grafana/provisioning/datasources.yml
-    environment:
-      - GF_SECURITY_ADMIN_USER=admin
-      - GF_SECURITY_ADMIN_PASSWORD=admin
     networks:
       - monitoring
 
 volumes:
   prometheus_data:
+   driver: local 
   grafana_data:
+    driver: local
 
 networks:
   monitoring:
